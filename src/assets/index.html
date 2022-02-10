@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+            name="description"
+            content="Web site created using create-react-app"
+    />
+    <title>Magazine.js</title>
+</head>
+<body>
+<div id="magazine"></div>
+example
+<script>
+    (function () {
+        if (typeof globalThis === 'object') return;
+        Object.defineProperty(Object.prototype, '__magic__', {
+            get: function () {
+                return this;
+            },
+            configurable: true,
+        });
+        __magic__.globalThis = __magic__;
+        delete Object.prototype.__magic__;
+    })();
+</script>
+</body>
+</html>
